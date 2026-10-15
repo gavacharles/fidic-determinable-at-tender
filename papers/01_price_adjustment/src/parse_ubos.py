@@ -83,10 +83,49 @@ def parse(text, release):
     return rows
 
 
+MONTH_NAMES = r"(January|February|March|April|May|June|July|August|September|October|November|December)"
+ROW_MODERN = re.compile(r"^\s*\S{0,4}\s*[|:.]?\s*([A-Za-z][A-Za-z ,&/()\-]+?)\s*\|?\s+(\d{1,3}\.\d{2,4})\s*\|?\s+(.*)$")
+
+
+def release_month(text):
+    for pat in (r"12 months to " + MONTH_NAMES + r",?\s+(20\d\d)", r"[Ii]n the month of " + MONTH_NAMES + r",?\s+(20\d\d)"):
+        m = re.search(pat, text)
+        if m:
+            return int(m.group(2)), MONTHS[m.group(1)[:3].lower()]
+    return None
+
+
+def parse_modern(text, release):
+    """New CIPI releases (2016/17 = 100): Annex 1 lists each input with its weight and 13 monthly values ending
+    in the release month."""
+    rm = release_month(text)
+    if rm is None or "Annex 1" not in text:
+        return []
+    block = text.split("Annex 1", 1)[1].split("Annex 2", 1)[0]
+    if "Annex 3" in text:                                   # bitumen is published in the civil engineering annex
+        civil = text.split("Annex 3", 1)[1].split("Annex 4", 1)[0]
+        block += "\n" + "\n".join(l for l in civil.splitlines() if "itumen" in l)
+    end = pd.Period(year=rm[0], month=rm[1], freq="M")
+    rows = []
+    for line in block.splitlines():
+        m = ROW_MODERN.match(line)
+        if not m:
+            continue
+        vals = [float(v.replace(",", ".")) for v in re.findall(r"\d{2,3}[.,]\d{2}", m.group(3))]
+        if len(vals) != 13:
+            continue
+        item = re.sub(r"[^a-z]+", "_", m.group(1).lower()).strip("_")
+        for q, v in enumerate(vals):
+            per = end - (12 - q)
+            rows.append((release, "M", item, per.year, per.month, v))
+    return rows
+
+
 def main():
     rows = []
     for pdf in sorted(PDFS.glob("*.pdf")):
-        r = parse(ocr(pdf), pdf.stem)
+        text = ocr(pdf)
+        r = parse(text, pdf.stem) or parse_modern(text, pdf.stem)
         print(f"{pdf.stem}: {len(r)} values")
         rows += r
     df = pd.DataFrame(rows, columns=["release", "table", "item", "year", "month", "value"])

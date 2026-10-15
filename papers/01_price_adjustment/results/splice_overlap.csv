@@ -1,0 +1,14 @@
+legacy_item,modern_item,overlap_months,first,last,mean_ratio,cv_ratio_pct
+labour_wage_rates,labour,3,2022-03-01,2022-05-01,3.277,2.093
+equipment_charge_out,equipment_hire_charges,3,2022-03-01,2022-05-01,2.775,0.115
+cement,cement,4,2022-03-01,2022-06-01,1.787,2.921
+steel_bars,high_tensile_steel_bars,4,2022-03-01,2022-06-01,1.846,3.117
+other_iron_steel,high_tensile_steel_bars,4,2022-03-01,2022-06-01,1.787,1.749
+roofing_sheets,sheet_steel_roofing_sheets_and_similar,4,2022-03-01,2022-06-01,2.257,8.108
+diesel,diesel,4,2022-03-01,2022-06-01,1.807,6.858
+bitumen,bitumen_and_bitumen_primer,4,2022-03-01,2022-06-01,1.366,0.732
+aggregate,aggregate_hardcore_crushed_broken_stone,4,2022-03-01,2022-06-01,1.283,0.915
+lime,lime,4,2022-03-01,2022-06-01,2.3,7.72
+paint,paints_and_varnishes,4,2022-03-01,2022-06-01,1.866,2.726
+pvc_hdpe_pipes,plastic_pipes_and_fittings,4,2022-03-01,2022-06-01,1.524,2.034
+clay_bricks_tiles,clay_bricks_and_tiles,4,2022-03-01,2022-06-01,2.018,0.942

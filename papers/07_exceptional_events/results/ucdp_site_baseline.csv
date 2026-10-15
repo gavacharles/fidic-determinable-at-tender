@@ -1,0 +1,7 @@
+site,events_2000_23,months_with_fatal_event,monthly_probability,return_period_months,events_2020_21
+Masindi (A),1,1,0.0035,288.0,0
+Hoima (A/B),13,8,0.0278,36.0,0
+Kiboga (B),4,4,0.0139,72.0,1
+Busunju (B),18,12,0.0417,24.0,8
+Kampala (E),19,14,0.0486,20.5714,9
+Kapchorwa (D),9,6,0.0208,48.0,0

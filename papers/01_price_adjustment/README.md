@@ -2,7 +2,7 @@
 
 *Part of the research agenda* ***Determinable at tender*** *(see ../../docs/research_agenda.md).*
 
-**Status:** data assembly in progress (15 Oct 2026). **Repositioned** after review of the author's DAM work (see ../../docs/related_work.md).
+**Status:** full first draft, `paper/manuscript.md` (15 Oct 2026). **Repositioned** after review of the author's DAM work (see ../../docs/related_work.md).
 
 **Positioning.** The DAM papers ("Beyond Static Escalation"; "When to Adjust, Not How Much"; "Brent to Site") address the *computational form* of 13.8/13.7: lag, coefficient stability, publication lag, triggers and caps. This paper addresses what they leave open: **the identity and governance of the index itself**. Which source, which series, what happens when the statistical agency rebases or discontinues it, who chooses the weights, and when adjustment starts. It cites and builds on DAM rather than re-estimating escalation dynamics.
 
@@ -30,7 +30,25 @@
 
   (`results/contract_D_spread.csv`, `results/dead_band.csv`, `figures/fig_contract_D.png`)
 
-**To do.**
+**Deep-phase additions (15 Oct 2026).**
+
+- OCR cleaning: 14 corrections (8 cross-release digit misreads, 6 spikes), logged in `results/qc_log.csv`.
+- Project C recomputed: base Jun 2019; all 7 base values match UBOS exactly. Spread up to 6.1 points; about UGX 8.0 bn.
+- Project E, the KCCA "sources of indices" dispute (Table B US BLS vs UBOS):
+  - foreign-currency adjustment 33.2% (BLS) vs 17.1% (UBOS); the Contractor reported 32.19% / 21.89%;
+  - the BLS base was preliminary (steel 191.1 → 197.2 revised);
+  - the MDB 2010 clause says "if their source is in doubt, it shall be determined by the Engineer".
+- Weights vs the UBOS civil-engineering basket: fuel 6–44% vs 3%; no bidder includes aggregate, murram, concrete or pipes (34% of the basket); a = 0.20 everywhere.
+- Dead band and cap by Base Date 2016–2023: D earthworks loses 1.2 points on average (max 5.4) to the dead band; the 10% cap binds for 27% of Base Dates.
+
+**Remaining.**
+
+- China source for E (needs a Chinese index series).
+- Project B weights (Appendix to Bid not in the volume).
+- Reference list.
+- Clearance of case material with the parties.
+
+**Original to-do (superseded).**
 
 - Outlier screen for OCR misreads (e.g. a one-month dip around Aug 2019).
 - Parse the 4 unparsed CIPI releases.

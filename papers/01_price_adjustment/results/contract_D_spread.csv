@@ -1,21 +1,21 @@
 bill,date,Pn_min,Pn_max,spread_pct_points,money_spread_ugx_bn_if_whole_bill_in_window
-Ancillary road works,2023-06-01,1.1505,1.2264,7.5868,
+Ancillary road works,2023-06-01,1.1503,1.226,7.5651,
 Ancillary road works,2024-12-01,1.1763,1.2561,7.9808,
 Ancillary road works,2025-12-01,1.1769,1.2576,8.0679,
-Ancillary road works,Jul 2022-Dec 2025 mean adjustment,1.1692,1.2387,6.9526,0.136
-Bituminous layers & seals,2023-06-01,1.0848,1.1234,3.8599,
+Ancillary road works,Jul 2022-Dec 2025 mean adjustment,1.1685,1.2373,6.8801,0.1346
+Bituminous layers & seals,2023-06-01,1.0667,1.1055,3.8846,
 Bituminous layers & seals,2024-12-01,1.0917,1.1304,3.8644,
 Bituminous layers & seals,2025-12-01,1.0991,1.1415,4.2382,
-Bituminous layers & seals,Jul 2022-Dec 2025 mean adjustment,1.097,1.1349,3.7879,0.1184
-Drainage,2023-06-01,1.0967,1.1361,3.9378,
+Bituminous layers & seals,Jul 2022-Dec 2025 mean adjustment,1.094,1.1317,3.7783,0.1181
+Drainage,2023-06-01,1.0967,1.1337,3.699,
 Drainage,2024-12-01,1.0967,1.1573,6.0593,
 Drainage,2025-12-01,1.0967,1.162,6.5262,
-Drainage,Jul 2022-Dec 2025 mean adjustment,1.0964,1.1431,4.669,1.2309
-Earthworks & pavement layers,2023-06-01,1.1914,1.2633,7.185,
+Drainage,Jul 2022-Dec 2025 mean adjustment,1.0964,1.1421,4.5636,1.2031
+Earthworks & pavement layers,2023-06-01,1.1853,1.2572,7.1888,
 Earthworks & pavement layers,2024-12-01,1.2008,1.2727,7.1912,
 Earthworks & pavement layers,2025-12-01,1.2172,1.2903,7.3017,
-Earthworks & pavement layers,Jul 2022-Dec 2025 mean adjustment,1.2102,1.2806,7.0413,1.8321
-Structures,2023-06-01,1.0857,1.1225,3.681,
+Earthworks & pavement layers,Jul 2022-Dec 2025 mean adjustment,1.2075,1.2778,7.0209,1.8268
+Structures,2023-06-01,1.0843,1.1189,3.4588,
 Structures,2024-12-01,1.0857,1.1385,5.2776,
 Structures,2025-12-01,1.0857,1.142,5.6338,
-Structures,Jul 2022-Dec 2025 mean adjustment,1.0854,1.1287,4.333,0.2748
+Structures,Jul 2022-Dec 2025 mean adjustment,1.0854,1.1285,4.308,0.2732

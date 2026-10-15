@@ -1,0 +1,15 @@
+era,item,date,latest,chosen,rule,n_vintages
+legacy,aggregate,2021-08-01,182.09,152.09,mode,5
+legacy,cement_quantities,2021-10-01,25.13,325.13,mode,5
+legacy,equipment_charge_out,2019-06-01,200.03,277.73,mode,4
+legacy,lime,2021-02-01,284.25,234.25,mode,7
+legacy,lime,2021-06-01,286.41,236.41,mode,6
+legacy,lime,2021-08-01,281.36,231.36,mode,5
+legacy,roofing_sheets,2021-03-01,281.56,231.56,mode,7
+legacy,roofing_sheets,2021-05-01,289.97,239.97,mode,5
+legacy,cement_quantities,2016-02-01,171.85,211.19,spike -> neighbour mean,1
+legacy,cement_quantities,2016-03-01,209.32,175.08499999999998,spike -> neighbour mean,1
+legacy,cement_quantities,2016-04-01,178.32,211.45499999999998,spike -> neighbour mean,1
+legacy,cement_quantities,2018-06-01,181.91,207.32999999999998,spike -> neighbour mean,1
+legacy,cement_quantities,2019-05-01,273.15,244.20999999999998,spike -> neighbour mean,1
+legacy,whole_sector,2020-03-01,287.97,239.325,spike -> neighbour mean,1

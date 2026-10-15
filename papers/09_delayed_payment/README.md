@@ -2,7 +2,17 @@
 
 *Part of the research agenda* ***Determinable at tender*** *(see ../../docs/research_agenda.md).*
 
-**Status:** scoped
+**Status:** first draft, `paper/manuscript.md` (15 Oct 2026).
+
+**Findings.**
+
+- Contract Data refers to "the discount rate of the Central Bank": B is +1 point, D and E are +3. No BoU series has that name.
+- 2011–18: charges based on the CBR or T-bill rate averaged 14.0–16.2%, against 22.6% lending (a 6.5–8.6-point annual shortfall).
+- A UGX 10 bn certificate paid 200 days late recovers 47–59% of the financing cost (73% on the rediscount reading).
+- OAG: delays of 94–461 days beyond 56; UNRA interest of UGX 7.3 bn (FY19/20) and 17 bn (FY20/21).
+- Proposal: name the series, set the margin to the cost of credit, and define "due".
+
+Script: `src/payment.py`.
 
 **Clause.** 14.8 Delayed Payment [1999: 14.8]: financing charges at the rate stated in the Contract Data, by default 3 percentage points above the central bank discount rate in the currency of payment, compounded monthly.
 

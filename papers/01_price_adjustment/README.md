@@ -6,6 +6,39 @@
 
 **Positioning.** The DAM papers ("Beyond Static Escalation"; "When to Adjust, Not How Much"; "Brent to Site") address the *computational form* of 13.8/13.7: lag, coefficient stability, publication lag, triggers and caps. This paper addresses what they leave open: **the identity and governance of the index itself**. Which source, which series, what happens when the statistical agency rebases or discontinues it, who chooses the weights, and when adjustment starts. It cites and builds on DAM rather than re-estimating escalation dynamics.
 
+**First results (15 Oct 2026).**
+
+- **Parser validated against a signed contract.** Parsed March 2017 legacy values match the base values printed in Project D's Schedule of Adjustment Data:
+
+  | Index | Parsed | Contract |
+  |---|---|---|
+  | Labour | 331.84 | 332 |
+  | Equipment | 279.18 | 279 |
+  | Cement | 189.93 | 190 |
+  | Steel bars | 293.10 | 293 |
+  | Diesel | 207.56 | 208 |
+  | Bitumen | 179.31 | 179 |
+  | Metal products (= other iron & steel) | 222.1 | 222 |
+
+  (`results/base_check.csv`)
+- **Rebasing.** Legacy basic headings end in June 2022; CIPI 2016/17 items begin in March 2022. Only 3–4 overlap months are available to splice, and the splice ratio varies by up to 7–8% within them (roofing sheets 8.1%, lime 7.7%, diesel 6.9%). Mapping is a choice: legacy steel bars and "metal products" have several defensible CIPI successors. (`results/splice_overlap.csv`)
+- **Revisions.** CIPI items are revised in 20–40% of months across releases (bitumen 43%), by up to 3–8%. The "index 49 days before" therefore depends on the vintage used. (`results/revisions.csv`; legacy revisions above 20% are probable OCR errors, to screen.)
+- **Contract D recomputed** (`src/contract_recompute.py`; 3 successor mappings × 4 splice rules, including freezing at the last published value):
+  - after June 2022, Pn differs by **4–8 percentage points** across defensible choices (earthworks 7.0–7.3; ancillary 7.6–8.1);
+  - about **UGX 3.6 bn** spread if each bill's work fell in Jul 2022 – Dec 2025, on about UGX 64 bn of adjustable work (5.6%);
+  - **18-month dead band:** unpaid escalation averaged 1.4–3.5% by bill, peaking at **11.6%** (earthworks, fuel-heavy).
+
+  (`results/contract_D_spread.csv`, `results/dead_band.csv`, `figures/fig_contract_D.png`)
+
+**To do.**
+
+- Outlier screen for OCR misreads (e.g. a one-month dip around Aug 2019).
+- Parse the 4 unparsed CIPI releases.
+- Apply to Projects B and C (C includes Dubai bitumen).
+- KCCA "sources of indices" case.
+- Weight dispersion across contracts.
+- Cap analysis.
+
 **Revised research questions.**
 
 1. *Sources:* how often, and how far, do defensible alternative index sources (UBOS basic heading vs sector index vs international, e.g. Dubai bitumen) change the adjustment on the same contract? Case: the KCCA "Sources of Indices for Price Adjustment" dispute.

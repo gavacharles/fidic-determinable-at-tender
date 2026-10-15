@@ -21,7 +21,15 @@ def main():
                       ("SUBSET", f"long({BBOX[0]},{BBOX[2]})"), ("SUBSET", f"lat({BBOX[1]},{BBOX[3]})"),
                       ("SUBSETTINGCRS", "http://www.opengis.net/def/crs/EPSG/0/4326"),
                       ("OUTPUTCRS", "http://www.opengis.net/def/crs/EPSG/0/4326")]
-            r = requests.get("https://maps.isric.org/mapserv", params=params, timeout=600)
+            r = None
+            for attempt in range(4):
+                try:
+                    r = requests.get("https://maps.isric.org/mapserv", params=params, timeout=900)
+                    break
+                except requests.RequestException as e:
+                    print("retry", dest.name, attempt, type(e).__name__, flush=True)
+            if r is None:
+                continue
             if r.ok and r.content[:2] in (b"II", b"MM"):
                 dest.write_bytes(r.content)
                 print("ok", dest.name, len(r.content) // 1e6, "MB", flush=True)

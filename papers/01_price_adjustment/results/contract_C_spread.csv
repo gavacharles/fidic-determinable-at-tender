@@ -1,0 +1,5 @@
+bill,date,Pn_min,Pn_max,spread_pct_points,money_spread_ugx_bn_if_whole_bill_in_window
+Whole works (local currency),2023-06-01,1.0135,1.0511,3.7617,
+Whole works (local currency),2024-12-01,1.0135,1.071,5.7473,
+Whole works (local currency),2025-12-01,1.0135,1.0742,6.0764,
+Whole works (local currency),Jul 2022-Dec 2025 mean adjustment,1.0133,1.0631,4.9711,8.0445

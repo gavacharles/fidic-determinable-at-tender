@@ -54,11 +54,40 @@ def main():
     d["date"] = pd.to_datetime(dict(year=d.year, month=d.month, day=1))
     d["era"] = (d.table == "M").map({True: "modern", False: "legacy"})
     d = d.drop_duplicates(["era", "item", "date", "vintage"])
-    latest = d.sort_values("vintage").groupby(["era", "item", "date"]).tail(1)
+    chosen, qc = [], []
+    for key, g in d.sort_values("vintage").groupby(["era", "item", "date"]):
+        vals = g.value.round(2)
+        med = vals.median()
+        mode = vals.mode()
+        if len(vals) >= 3 and (vals == mode.iloc[0]).sum() >= 2:
+            v, how = mode.iloc[0], "mode"
+        elif len(vals) >= 2 and abs(vals.iloc[-1] / med - 1) > 0.05:
+            v, how = med, "median (latest deviates >5%)"
+        else:
+            v, how = vals.iloc[-1], "latest"
+        if how != "latest" and abs(vals.iloc[-1] / v - 1) > 0.15:
+            qc.append({"era": key[0], "item": key[1], "date": key[2].date(), "latest": vals.iloc[-1], "chosen": v,
+                       "rule": how, "n_vintages": len(vals)})
+        chosen.append({"era": key[0], "item": key[1], "date": key[2], "value": v})
+    latest = pd.DataFrame(chosen)
     for era in ("legacy", "modern"):
         w = latest[latest.era == era].pivot(index="date", columns="item", values="value").sort_index()
+        # single-vintage spikes: >10% off both neighbours whose own values agree within 5%
+        for c in w:
+            x = w[c]
+            prev, nxt = x.shift(1), x.shift(-1)
+            spike = ((x / prev - 1).abs() > 0.10) & ((x / nxt - 1).abs() > 0.10) & ((prev / nxt - 1).abs() < 0.05)
+            for t in x.index[spike.fillna(False)]:
+                qc.append({"era": era, "item": c, "date": t.date(), "latest": x[t], "chosen": (prev[t] + nxt[t]) / 2,
+                           "rule": "spike -> neighbour mean", "n_vintages": 1})
+                w.loc[t, c] = (prev[t] + nxt[t]) / 2
         w.to_csv(DATA / f"ubos_series_{era}.csv")
-        print(era, w.shape, w.index.min().date(), w.index.max().date())
+        print(era, w.shape, w.index.min().date(), w.index.max().date(),
+              "missing months:", int(w.isna().all(axis=1).sum()))
+    pd.DataFrame(qc).to_csv(RES / "qc_log.csv", index=False)
+    print("QC corrections:", len(qc))
+    med = d.groupby(["era", "item", "date"]).value.transform("median")
+    d = d[(d.value / med - 1).abs() <= 0.15]                  # drop OCR misreads before measuring revisions
     g = d.groupby(["era", "item", "date"]).value
     rev = pd.DataFrame({"n_vintages": g.size(), "range_pct": (g.max() - g.min()) / g.mean() * 100}).reset_index()
     rev = rev[rev.n_vintages > 1].groupby(["era", "item"]).agg(

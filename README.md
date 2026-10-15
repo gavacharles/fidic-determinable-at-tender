@@ -16,7 +16,7 @@ FIDIC allocates risk through tests decided after the event ("Unforeseeable", "ex
 | 7 | Exceptional Events | 18 [19] | `papers/07_exceptional_events` | **First draft** |
 | 8 | Forces of nature, care of the Works | 17.2 [17.3] | `papers/08_forces_of_nature` | **First draft** |
 | 9 | Delayed payment | 14.8 | `papers/09_delayed_payment` | **First draft** |
-| 10 | Rate of progress and termination | 8.7 / 15.2 [8.6 / 15.2] | `papers/10_rate_of_progress` | Scoped |
+| 10 | Rate of progress and termination | 8.7 / 15.2 [8.6 / 15.2] | `papers/10_rate_of_progress` | **First draft** |
 
 - Agenda: [`docs/research_agenda.md`](docs/research_agenda.md)
 - Data audit: [`docs/data_audit.md`](docs/data_audit.md)

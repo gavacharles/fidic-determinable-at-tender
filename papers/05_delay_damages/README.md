@@ -2,7 +2,17 @@
 
 *Part of the research agenda* ***Determinable at tender*** *(see ../../docs/research_agenda.md).*
 
-**Status:** scoped
+**Status:** first draft, `paper/manuscript.md` (15 Oct 2026).
+
+**Findings.**
+
+- All five contracts state 0.05% of the Contract Price per day with a 10% cap. That is equivalent to an 18.25% first-year return, or an EIRR of about 17%.
+- From 21 World Bank EIRRs for Ugandan roads: the rate is 0.8–1.4× the implied public daily loss on rural and peri-urban trunk roads, so it is close to a genuine pre-estimate, not a penalty.
+- On Kampala urban roads it recovers only 21–28% of the loss.
+- The cap is reached at 200 days, against 472–849-day delays on Project A.
+- Proposal: rate = first-year benefit / 365 + supervision, taken from the road's own appraisal.
+
+Scripts: `src/proportionality.py`; data `data/eirr_roads.csv`.
 
 **Clause.** 8.8 Delay Damages [1999: 8.7]; Contract Data rate (often 0.05% of the Contract Price per day, capped at 10%).
 

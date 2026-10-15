@@ -1,0 +1,12 @@
+network,km,weighed_km,weighed_share
+primary,3593.194,1193.095,0.332
+trunk,971.93,674.787,0.694
+trunk + primary,4565.124,1867.882,0.409
+Project corridor A_lot3,43.0,0.0,0.0
+Project corridor A_lot4,30.025,0.0,0.0
+Project corridor B,145.106,0.0,0.0
+Weighed corridor: Kampala-Malaba,218.645,218.645,1.0
+Weighed corridor: Kibuye-Katuna,412.994,412.994,1.0
+Weighed corridor: Busega-Fort Portal-Mpondwe,420.243,420.243,1.0
+Weighed corridor: Kampala-Kafu-Nimule,440.083,440.083,1.0
+Weighed corridor: Malaba-Kamdini,352.249,352.249,1.0

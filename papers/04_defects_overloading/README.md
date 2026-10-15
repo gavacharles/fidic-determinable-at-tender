@@ -2,7 +2,19 @@
 
 *Part of the research agenda* ***Determinable at tender*** *(see ../../docs/research_agenda.md).*
 
-**Status:** scoped. **Re-designed for open data**: no UNRA data access (15 Oct 2026).
+**Status:** first draft, `paper/manuscript.md` (15 Oct 2026).
+
+**Findings.**
+
+- Project B design traffic recomputed over 168 defensible input combinations: 2.7–41 MESA (five traffic classes).
+  - The axle-load survey choice alone gives ×3.4.
+  - Project VEFs are 2.5–3.4× those of other Ugandan surveys and above legal-limit loading, so overloading is built into the design baseline.
+- Only 41% of OSM trunk and primary length is on a corridor with a fixed weighbridge (OAG 2025: 5 of 37 corridors); none of the 218 km of Project A and B roads is.
+- Proposal: a design-traffic baseline in the Contract, WIM monitoring in the DNP, and a load-adjusted defects test.
+
+Scripts: `src/cesa.py`, `src/weighbridge.py`.
+
+**Originally:** scoped. **Re-designed for open data**: no UNRA data access (15 Oct 2026).
 
 **Open-data design.**
 

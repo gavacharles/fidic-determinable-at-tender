@@ -2,7 +2,17 @@
 
 *Part of the research agenda* ***Determinable at tender*** *(see ../../docs/research_agenda.md).*
 
-**Status:** scoped
+**Status:** first draft, `paper/manuscript.md` (15 Oct 2026).
+
+**Findings.**
+
+- **Benchmarks diverge.** Project A in Feb 2021 was 38 points behind time-linear but 1.7 behind its revised programme.
+- **The milestone is lenient.** The 40%-at-60% milestone sits 23 points below Project B's plan; B still missed it (16%).
+- **Recovery feasibility.** Project B completion was infeasible on demonstrated rates from Oct 2023 (month 6), and above the programme's peak rate from Jan 2025. By Jul 2025, 8.8%/month was needed (4.4% with EOT) vs 2.3% achieved; the slowdown was under 16.1 for UGX 26 bn unpaid.
+- **OAG.** The milestone clause forfeited delay damages on KCCA roads.
+- Proposal: a named benchmark, a required-rate trigger, curve-based milestones, and exclusion of 16.1 periods.
+
+Script: `src/progress.py`.
 
 **Clause.** 8.7 Rate of Progress [1999: 8.6]; 15.1 Notice to Correct; 15.2 Termination for Contractor's Default (failing to proceed in accordance with Clause 8). 1999 15.2(c): "fails without reasonable excuse… to proceed with the Works in accordance with Clause 8".
 

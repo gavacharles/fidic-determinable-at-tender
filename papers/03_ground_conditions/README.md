@@ -2,7 +2,17 @@
 
 *Part of the research agenda* ***Determinable at tender*** *(see ../../docs/research_agenda.md).*
 
-**Status:** scoped
+**Status:** first draft, `paper/manuscript.md` (15 Oct 2026).
+
+**Findings.** Project A subgrade investigation: 62 test pits, soaked CBR95, November 2019.
+
+- CBR95 has no spatial autocorrelation (lag-0.5 km correlation −0.04).
+- 84–100% of poor subgrade (CBR95 < 8%) is unforeseen from neighbouring pits at every spacing (1–10 km); the share of poor ground (13% < 8%; 31% < 10%) is estimable.
+- SoilGrids is a weak predictor (best AUC 0.64).
+- Groundwater was recorded at only 2 pits, during the exceptional 2019 short rains.
+- Proposal: a quantity-based ground baseline at tender.
+
+Scripts: `src/parse_testpits.py`, `src/foreseeability.py`, `src/soil_predictor.py`, `src/fetch_soilgrids.py`.
 
 **Clause.** 4.12 Unforeseeable Physical Conditions [1999: 4.12], with 4.10 Use of Site Data and 4.11 Sufficiency of the Accepted Contract Amount. "Unforeseeable" (1.1.87) means not reasonably foreseeable by an experienced contractor by the Base Date. Climatic conditions are excluded.
 

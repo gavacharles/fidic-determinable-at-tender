@@ -2,7 +2,16 @@
 
 *Part of the research agenda* ***Determinable at tender*** *(see ../../docs/research_agenda.md).*
 
-**Status:** scoped
+**Status:** scoped. **Re-designed for open data**: no UNRA data access (15 Oct 2026).
+
+**Open-data design.**
+
+- (i) *Auditor General* annual and value-for-money reports (FY2017/18–2024/25): text-mine defects within the DNP, premature failure, overloading and axle-load control findings by project (reuse the author's OAG text-mining pipeline).
+- (ii) *World Bank / AfDB project documents* (PADs, ICRs, PCRs, all public): design traffic and ESALs vs traffic reported at completion, economic analysis, pavement performance notes.
+- (iii) *Contract design reports* in project files: design traffic class and ESALs (Projects B–D).
+- (iv) *UNRA annual and performance reports* (public PDFs): published axle-load statistics and the share of overloaded vehicles.
+
+**Revised question.** Do public audit and project records show systematic design-load exceedance and early defects? How does the DNP liability regime allocate that risk? Feasibility is now medium (text and document mining); scope is national and comparative rather than measured loading per road.
 
 **Clause.** 11 Defects after Taking Over (11.1–11.4), 4.1 (Yellow Book, fitness for purpose), and the Employer's risks relating to use and occupation. In practice the question is whether early pavement failure is a design, workmanship or overloading problem.
 

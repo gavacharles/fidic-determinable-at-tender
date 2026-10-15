@@ -1,8 +1,18 @@
-# Paper 1: Price adjustment: "same prices, different adjustment"
+# Paper 1: "Which index?" Sources, rebasing and dead bands in price adjustment (companion to DAM)
 
 *Part of the research agenda* ***Determinable at tender*** *(see ../../docs/research_agenda.md).*
 
-**Status:** data assembly in progress (15 Oct 2026)
+**Status:** data assembly in progress (15 Oct 2026). **Repositioned** after review of the author's DAM work (see ../../docs/related_work.md).
+
+**Positioning.** The DAM papers ("Beyond Static Escalation"; "When to Adjust, Not How Much"; "Brent to Site") address the *computational form* of 13.8/13.7: lag, coefficient stability, publication lag, triggers and caps. This paper addresses what they leave open: **the identity and governance of the index itself**. Which source, which series, what happens when the statistical agency rebases or discontinues it, who chooses the weights, and when adjustment starts. It cites and builds on DAM rather than re-estimating escalation dynamics.
+
+**Revised research questions.**
+
+1. *Sources:* how often, and how far, do defensible alternative index sources (UBOS basic heading vs sector index vs international, e.g. Dubai bitumen) change the adjustment on the same contract? Case: the KCCA "Sources of Indices for Price Adjustment" dispute.
+2. *Rebasing and discontinuation:* what happened to contracts naming legacy UBOS 2006-base basic-heading indices when UBOS moved to CIPI 2016/17 = 100? Splicing choices and their money effect.
+3. *Weights:* how dispersed are bidder-proposed weights across contracts for the same work type, and what do they do to the adjustment?
+4. *Commencement and caps:* what share of escalation falls in the 18-month dead band and above the 10% cap, especially in the 2022 shock?
+5. *Determinable at tender:* a "tender index pack" naming source, series, splice rule and BoQ-derived weights.
 
 **Found so far.**
 

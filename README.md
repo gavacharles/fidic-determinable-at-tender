@@ -7,10 +7,10 @@ FIDIC allocates risk through tests decided after the event ("Unforeseeable", "ex
 | # | Paper | Clause (FIDIC 2017 [1999]) | Folder | Status |
 |---|---|---|---|---|
 | 0 | Weather: "same rain, different verdict" | 8.5(c) [8.4(c)] + MoWT 1229 | separate repo `uganda-climate-disputes` | Full draft |
-| 1 | Price adjustment | 13.7 [13.8] | `papers/01_price_adjustment` | Data assembly |
+| 1 | Price adjustment: which index? (companion to DAM) | 13.7 [13.8] | `papers/01_price_adjustment` | Data assembly |
 | 2 | Access to the Site | 2.1 | `papers/02_site_access` | Scoped |
 | 3 | Unforeseeable physical conditions | 4.12 | `papers/03_ground_conditions` | Scoped |
-| 4 | Defects and overloading | 11 / 4.1 | `papers/04_defects_overloading` | Scoped (data access needed) |
+| 4 | Defects and overloading (open data) | 11 / 4.1 | `papers/04_defects_overloading` | Re-designed |
 | 5 | Delay damages | 8.8 [8.7] | `papers/05_delay_damages` | Scoped |
 | 6 | Notice time bar | 20.2.1 [20.1] | `papers/06_notice_time_bar` | Scoped |
 | 7 | Exceptional Events | 18 [19] | `papers/07_exceptional_events` | Pilot done |
@@ -20,6 +20,7 @@ FIDIC allocates risk through tests decided after the event ("Unforeseeable", "ex
 
 - Agenda: [`docs/research_agenda.md`](docs/research_agenda.md)
 - Data audit: [`docs/data_audit.md`](docs/data_audit.md)
+- Related work by the author (DAM etc.): [`docs/related_work.md`](docs/related_work.md)
 - Shared code: [`common/`](common/)
 
 Each paper folder: `README.md` (concept note), `src/`, `data/` (raw data not committed), `results/`, `figures/`, `paper/`.

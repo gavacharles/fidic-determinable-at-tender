@@ -1,0 +1,14 @@
+# Related work by the author (build on, do not duplicate)
+
+| Work | What it covers | Where |
+|---|---|---|
+| **"Beyond Static Escalation: A Lag-Adjusted Price Adjustment Mechanism for Construction Contracts in Uganda"** (Gavamukulya, Ogra, Aigbavboa; DAM manuscript) | Challenges three assumptions in FIDIC 13.8/13.7: contemporaneous pass-through, stable tender coefficients, index availability at certification. Derives a general dynamic escalation equation and reduces it to an estimable rule (fixed share of realised escalation, macro-financial forward correction of the latest index, tolerance-gated revision). 3 archetypes × 1,200 resimulations. | `~/Downloads/DAM_Manuscript_Final-2.docx`; OneDrive `CiO/Paper pipeline` |
+| **"When to Adjust, Not How Much: A Trigger-Gated Alternative to Continuous FIDIC 13.8 Price Escalation"** (DAM adaptive governance) | Weighted Macro-Volatility Index, trigger-gated DAM, cap-binding diagnostics, admin burden, Monte Carlo. Real-project retrofit on 38 price-adjustment certificates of a UNRA design-and-build road contract (2019–2024). | GitHub `DAM_Adaptive_Governance_Paper`; `~/Downloads/DAM_Adaptive_Governance_Manuscript.docx` |
+| **"Brent to Site"** | Brent shocks reach Ugandan construction costs through the local diesel price (not FX/CPI); the channel strengthened more than 5× after Feb 2022; cement is the domestic hub; real-contract IPC validation. | GitHub `brent-crude-uganda-escalation` |
+| **FIDIC clause reform PhD workstream** | Lag-adjusted, regime-dependent alternative to 13.8; 4-year hypothetical, Monte Carlo, sensitivity. | GitHub `fidic_clause_reform_phd` (private) |
+| **CiO pipeline** (`cio_pipeline-2/-3`) | Panel data (panel_v1.0), escalation module, DAM simulator (`p8_dam_simulator.py`). | `~/Downloads/cio_pipeline-3` |
+| **CIPI tracker and taxonomy** | UBOS CIPI reconstruction, nowcasts, unsupervised taxonomy of input price dynamics. | `~/Projects/cipi-tracker`, `~/Projects/cipi-taxonomy` |
+| **OAG text mining (FY2017/18–2024/25)** | Extracts and classifies systemic construction dispute drivers from Auditor General annual reports. | `~/Downloads/Text-Mining-Analysis-for-OAG-reports-from-2017-to-2025`; OneDrive `Projects/OAG Reports` |
+| **Weather EOT paper ("same rain, different verdict")** | Paper 0 of this programme. | GitHub `uganda-climate-disputes` |
+
+**Implication for Paper 1.** The DAM papers address the *computational form* of 13.8 (lags, coefficients, publication lag, triggers, caps). Paper 1 is repositioned to the *identity and governance of the index*, which DAM does not cover: source selection, discontinuation and rebasing, bidder-proposed weights, the commencement dead band. Case: the KCCA "Sources of Indices for Price Adjustment" dispute (author's memorandum and KCCA legal opinion, OneDrive Claims Expert/Clients/…/Rubaga and Makindye).

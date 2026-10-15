@@ -2,7 +2,16 @@
 
 *Part of the research agenda* ***Determinable at tender*** *(see ../../docs/research_agenda.md).*
 
-**Status:** scoped
+**Status:** first draft, `paper/manuscript.md` (15 Oct 2026).
+
+**Findings (Project A).**
+
+- **Weather (Clause 1229).** A 28-day clock from the first excess rain day expires before the month's gridded record is published in 52% of positive months. Under the algebraic-sum rule, entitlement peaked at 48 days and ended at 38.4: 28.4 of 66.8 accrued days were cancelled later.
+- **Possession.** "Approximately 5 km sections over 546 days" yields due dates per km differing by a median of 304 days (maximum 600) across readings.
+- **Notices.** Rolling notices to claim every 19–49 days, two years after access was due.
+- Proposal: a notice clock tied to named data releases and to a section-by-section access table.
+
+Script: `src/notice_clock.py`.
 
 **Clause.** 20.2.1 Notice of Claim [1999: 20.1]. Notice is due within 28 days after the claiming Party "became aware, or should have become aware" of the event. Failure is a time bar, subject in 2017 to 20.2.5 (the DAAB may consider late notice).
 

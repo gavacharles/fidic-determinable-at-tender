@@ -2,7 +2,16 @@
 
 *Part of the research agenda* ***Determinable at tender*** *(see ../../docs/research_agenda.md).*
 
-**Status:** scoped
+**Status:** first draft, `paper/manuscript.md` (15 Oct 2026).
+
+**Findings.** 34 HydroRIVERS crossings on the Project A and B roads; CHIRPS GEV 1981–2018.
+
+- A 10-year temporary-works standard is exceeded with 27% probability at one structure over 3 years (41% over 5), and 37–59% somewhere on the project.
+- Project A, 22 Nov 2019: a 49-year storm on 1-day rainfall at 10 of 13 crossings, but a 4.5-year event on 3-day rainfall.
+- Project B to date: ≤ about 10-year (1-day), ≤ 2.6-year (3-day).
+- Proposal: state the temporary-works design event (return period, duration, data) in the Contract Data; exceedance at a structure is an Employer's risk.
+
+Scripts: `src/crossings.py`, `src/extract_rain.py` (Paper 0 env), `src/flood_risk.py`.
 
 **Clause.** 17.2 Liability for Care of the Works with Employer's risks in 17.2(d) [1999: 17.3(h)], which covers forces of nature that are Unforeseeable or against which an experienced contractor could not reasonably have taken adequate preventive precautions.
 

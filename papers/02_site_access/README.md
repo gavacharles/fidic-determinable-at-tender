@@ -2,7 +2,16 @@
 
 *Part of the research agenda* ***Determinable at tender*** *(see ../../docs/research_agenda.md).*
 
-**Status:** scoped
+**Status:** first draft, `paper/manuscript.md` (15 Oct 2026); Project B and Kabaale lot imagery in progress.
+
+**Findings (Project A, Masindi–Biiso, Sentinel-2 2018–2024, seasonally adjusted NDVI per 1 km section).**
+
+- No section was cleared by contractual availability (25 Oct 2020).
+- Clearance came in two waves: Jan–Jun 2021 (14 sections) and Nov 2021–Apr 2022 (27); 41 of 43 sections were cleared by Apr 2022.
+- 5 of the 6 sections the strip map records as not acquired were cleared too, some a year before the strip map.
+- The claimed delay window runs 603 days past the last clearance.
+
+Scripts: `src/corridors.py`, `src/s2_timeseries.py`, `src/possession.py`.
 
 **Clause.** 2.1 Right of Access to the Site [1999: 2.1]; Contract Data milestones for handover of sections. Linked to 8.5 (EOT) and 20.
 

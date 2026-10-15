@@ -1,7 +1,10 @@
 """Date right-of-way clearance per 1 km section from the Sentinel-2 series and compare with land-acquisition records.
 
-Clearance month: first month in which section NDVI falls below (pre-works median - max(0.12, 3 x MAD)) and stays
-below in at least 3 of the next 4 observed months, with NDBI above its pre-works median. Pre-works = 2018-01 .. 2019-12.
+Seasonally adjusted: each section's NDVI and NDBI are expressed as anomalies from their calendar-month median over the
+pre-works period (2018-01 .. 2020-09, before contractual site availability), so dry-season browning is not read as
+clearance. Clearance month: first month from 2020-01 in which the NDVI anomaly falls below -max(0.12, 3 x MAD of the
+pre-works anomalies) and stays below in at least 5 of the next 6 observed months (i.e. through a wet season), with a
+positive NDBI anomaly.
 Comparison for Project A Masindi-Biiso (A_lot3):
   - land acquired by chainage (EOT-7, Employer strip map 9 Jun 2022 / Engineer letter 8 Feb 2023);
   - contractual availability date for the whole Site: 25 Oct 2020;
@@ -20,7 +23,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
 from common.style import BLUE, CAT, INK2, MUTED, RED, paper_dir, save  # noqa: E402
 
 D = paper_dir("02_site_access")
-PRE = ("2018-01", "2019-12")
+PRE = ("2018-01", "2020-09")
 DATES = {"Contractual availability (25 Oct 2020)": "2020-10", "Claimed delay starts (8 Jul 2021)": "2021-07",
          "Strip map (9 Jun 2022)": "2022-06", "Claimed delay ends (24 Dec 2023)": "2023-12"}
 
@@ -34,26 +37,31 @@ def monthly(code):
     return nd, nb
 
 
+def seasonal_anomaly(df):
+    pre = df.loc[PRE[0]:PRE[1]]
+    clim = pre.groupby(pre.index.str[5:7]).median()
+    return df - clim.reindex(df.index.str[5:7]).set_axis(df.index)
+
+
 def clearance(nd, nb):
+    a_nd, a_nb = seasonal_anomaly(nd), seasonal_anomaly(nb)
     rows = []
     for sec in nd.columns:
-        x, y = nd[sec].dropna(), nb[sec].dropna()
+        x, y = a_nd[sec].dropna(), a_nb[sec].dropna()
         pre = x.loc[PRE[0]:PRE[1]]
-        if len(pre) < 6:
+        if len(pre) < 8:
             rows.append({"section": sec, "clearance_month": None, "pre_ndvi": np.nan})
             continue
-        med, mad = pre.median(), (pre - pre.median()).abs().median()
-        thr = med - max(0.12, 3 * mad)
-        ymed = y.loc[PRE[0]:PRE[1]].median()
+        thr = -max(0.12, 3 * (pre - pre.median()).abs().median())
         post = x.loc["2020-01":]
         found = None
         for i, (m, v) in enumerate(post.items()):
-            nxt = post.iloc[i + 1:i + 5]
-            if v < thr and (nxt < thr).sum() >= min(3, len(nxt)) and y.get(m, -9) > ymed:
+            nxt = post.iloc[i + 1:i + 7]
+            if v < thr and len(nxt) >= 4 and (nxt < thr).sum() >= min(5, len(nxt) - 1) and y.get(m, -9) > 0:
                 found = m
                 break
-        rows.append({"section": sec, "clearance_month": found, "pre_ndvi": med, "threshold": thr,
-                     "min_post_ndvi": post.min() if len(post) else np.nan})
+        rows.append({"section": sec, "clearance_month": found, "pre_ndvi": nd[sec].loc[PRE[0]:PRE[1]].median(),
+                     "threshold": thr, "min_post_anomaly": post.min() if len(post) else np.nan})
     return pd.DataFrame(rows)
 
 
@@ -90,7 +98,7 @@ def main(code="A_lot3"):
     print(summ.round(2).to_string(index=False))
 
     # figure: NDVI anomaly heatmap (section x month), with acquisition status and key dates
-    anom = nd.sub(nd.loc[PRE[0]:PRE[1]].median(), axis=1)
+    anom = seasonal_anomaly(nd)
     fig, (ax0, ax) = plt.subplots(1, 2, figsize=(12, 6), gridspec_kw={"width_ratios": [0.4, 12], "wspace": 0.02},
                                   sharey=True)
     ax0.imshow(c.acquired_share.values[:, None], aspect="auto", cmap=ListedColormap([RED[3], BLUE[1]]), vmin=0, vmax=1,
@@ -102,15 +110,16 @@ def main(code="A_lot3"):
     months = list(anom.index)
     ticks = [i for i, m in enumerate(months) if m.endswith("-01")]
     ax.set_xticks(ticks, [months[i][:4] for i in ticks])
-    for lab, m in DATES.items():
+    for k, (lab, m) in enumerate(DATES.items()):
         if m in months:
             ax.axvline(months.index(m), color=INK2, lw=1, ls="--")
-            ax.text(months.index(m) + 0.5, -0.8, lab, rotation=0, fontsize=6.5, color=INK2, va="bottom")
+            ax.text(months.index(m), 1.005 + 0.035 * (k % 2), lab, fontsize=6.5, color=INK2, va="bottom", ha="center",
+                    transform=ax.get_xaxis_transform())
     cm = [(months.index(m), s) for s, m in zip(c.section, c.clearance_month) if m in months]
     ax.scatter([a for a, _ in cm], [b for _, b in cm], marker="|", color="black", s=40, label="Detected clearance")
-    ax.set_title("Right-of-way vegetation anomaly by 1 km section (Sentinel-2 NDVI vs 2018-19); blue = acquired land, "
-                 "red = not acquired", fontsize=8.5, loc="left", pad=16)
-    ax.legend(fontsize=7, loc="lower left")
+    ax.set_title("Right-of-way vegetation anomaly by 1 km section (Sentinel-2 NDVI vs pre-works same-month median); blue = acquired land, "
+                 "red = not acquired", fontsize=8.5, loc="left", pad=30)
+    ax.legend(fontsize=7, loc="upper left", bbox_to_anchor=(0, -0.05), frameon=False)
     ax.grid(False)
     cb = fig.colorbar(im, ax=ax, fraction=0.025, pad=0.01)
     cb.set_label("NDVI anomaly", fontsize=8)

@@ -2,7 +2,16 @@
 
 *Part of the research agenda* ***Determinable at tender*** *(see ../../docs/research_agenda.md).*
 
-**Status:** scoped
+**Status:** pilot done (15 Oct 2026)
+
+**Pilot result (Project A COVID-19 claim; `src/covid_claim.py`, `results/covid_claim_days.csv`, `figures/fig_covid_claim.png`).**
+
+- The window granted (10 Mar – 20 Sep 2020, 195 days; 194 granted, 230 claimed) begins 12 days before Uganda's first restriction (international travel ban 22 Mar; workplace and public-transport closure 25 Mar).
+- Within the window, some site-relevant restriction applied on 180 days, but public transport was closed on only 129.
+- Construction was allowed to continue with workers on site, so the binding restriction matters.
+- On OxCGRT coding, "workplace closing required" and "stay at home" persist to end-2021: they also capture closures of other sectors and curfews. **Which indicator defines the event is itself an open choice** ("same pandemic, different verdict"), directly parallel to the rainfall-product finding in Paper 0.
+
+**Next.** UCDP unrest-event return periods by site and month (2020–21 election period); compare with other Exceptional Event claims in the files; East Africa comparison (Kenya, Tanzania, Rwanda in OxCGRT).
 
 **Clause.** 18 Exceptional Events [1999: 19 Force Majeure]: an event beyond a Party's control, which could not reasonably have been provided against, could not reasonably have been avoided once it arose, and is not substantially attributable to the other Party. Listed examples include riot, commotion and natural catastrophes.
 

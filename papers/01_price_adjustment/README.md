@@ -2,7 +2,28 @@
 
 *Part of the research agenda* ***Determinable at tender*** *(see ../../docs/research_agenda.md).*
 
-**Status:** scoped
+**Status:** data assembly in progress (15 Oct 2026)
+
+**Found so far.**
+
+- *Contract formulas (Projects B, C, D; OCR of signed contracts, confidential).*
+  - Separate formulas per bill: drainage, earthworks, bituminous, ancillary, structures.
+  - Indices named: labour, equipment, cement, reinforcement steel, bitumen, fuel, metal products (and explosives in B). All are UBOS construction-sector "basic heading" indices (Jan–Mar 2006 = 100), except bitumen in C, which is priced from Dubai.
+  - Non-adjustable portion a = 0.20 everywhere; weights are bidder-proposed (e.g. fuel 0.35 in D's earthworks; bitumen 0.45 in C).
+  - 49-day index lag. **No adjustment for the first 18 months after the Base Date** (B, D), i.e. half of a 3-year contract is unprotected. Cap of 10% of the Accepted Contract Amount (B).
+- *Index data.* `src/fetch_ubos.py` downloads the UBOS releases; `src/parse_ubos.py` OCRs them and parses six tables per legacy release (29 series):
+  - sector indices including roads (paved), roads (gravel) and civil works;
+  - basic headings for cement, steel bars, other iron and steel, diesel, bitumen, labour wage rates, equipment charge-out rates and more.
+
+  Output: `data/ubos_input_indices_vintages.csv` (one row per release × item × month, so revisions are kept).
+- *Open issue to test.* UBOS rebased to CIPI 2016/17 = 100 (c. 2022). Contracts that name legacy 2006-base basic-heading indices may have lost their index mid-contract. Check what the modern releases publish (modern-format parser still to write).
+
+**Next.**
+
+1. Finish the download and parse all releases (legacy and modern).
+2. Build continuous item series and a revision log.
+3. Recompute the formula for B, C and D under alternative index and weight choices, and compare with sector indices (roads paved) and with actual cost paths.
+4. Quantify the 18-month dead band and the 10% cap during the 2022 fuel and bitumen shock.
 
 **Clause.** 13.7 Adjustments for Changes in Cost [1999: 13.8], with the Schedule of Cost Indexation (Contract Data).
 

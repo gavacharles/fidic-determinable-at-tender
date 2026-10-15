@@ -25,7 +25,8 @@ def main():
             ok += 1
             continue
         try:
-            r = requests.get(BASE + urllib.parse.quote(n), timeout=90)
+            r = requests.get(BASE + urllib.parse.quote(n), timeout=60)
+            print(r.status_code, n, flush=True)
             if r.status_code == 200 and r.content[:4] == b"%PDF":
                 dest.write_bytes(r.content)
                 ok += 1

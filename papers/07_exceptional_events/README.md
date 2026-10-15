@@ -2,7 +2,13 @@
 
 *Part of the research agenda* ***Determinable at tender*** *(see ../../docs/research_agenda.md).*
 
-**Status:** pilot done (15 Oct 2026)
+**Status:** first draft, `paper/manuscript.md` (15 Oct 2026).
+
+**Deepening (`src/ea_compare.py`).**
+
+- **Uganda 2020–21:** COVID triggers were in force from 175 days (public transport) to 647 days (workplace closure). Kenya 11–572 days; Rwanda 107–651; Tanzania 0–94.
+- **Project A window:** the triggers covered 129–182 days, against 194 granted and 230 claimed.
+- **UCDP baseline:** return periods for fatal events within 50 km of project sites run from 21 months (Kampala) to 288 months (Masindi). UCDP records no Ugandan event in 2020 (the November riots are invisible), so dataset choice decides whether unrest exists.
 
 **Pilot result (Project A COVID-19 claim; `src/covid_claim.py`, `results/covid_claim_days.csv`, `figures/fig_covid_claim.png`).**
 

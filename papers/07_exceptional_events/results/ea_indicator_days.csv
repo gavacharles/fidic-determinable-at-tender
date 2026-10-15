@@ -1,0 +1,25 @@
+country,indicator,first_day,last_day,days_2020_21,days_in_window,window_days
+Kenya,Workplace closing (C2>=2),2020-03-24,2022-05-16,411,181,195
+Kenya,Public transport closed (C5>=2),2021-12-21,2022-03-14,11,0,195
+Kenya,Stay at home (C6>=2),2020-03-27,2021-10-19,572,178,195
+Kenya,Internal movement (C7>=2),2020-03-27,2021-10-11,300,102,195
+Kenya,International travel ban (C8>=3),2020-03-17,2021-06-06,196,137,195
+Kenya,Stringency index >= 70,2020-03-24,2021-06-06,248,181,195
+Rwanda,Workplace closing (C2>=2),2020-03-21,2022-01-26,651,184,195
+Rwanda,Public transport closed (C5>=2),2020-03-21,2022-09-19,107,70,195
+Rwanda,Stay at home (C6>=2),2020-03-21,2022-03-04,651,184,195
+Rwanda,Internal movement (C7>=2),2020-03-21,2022-06-27,330,147,195
+Rwanda,International travel ban (C8>=3),2020-03-21,2020-07-31,133,133,195
+Rwanda,Stringency index >= 70,2020-03-21,2022-01-26,341,176,195
+Tanzania,Workplace closing (C2>=2),,,0,0,195
+Tanzania,Public transport closed (C5>=2),,,0,0,195
+Tanzania,Stay at home (C6>=2),,,0,0,195
+Tanzania,Internal movement (C7>=2),,,0,0,195
+Tanzania,International travel ban (C8>=3),2020-04-12,2021-06-30,94,36,195
+Tanzania,Stringency index >= 70,,,0,0,195
+Uganda,Workplace closing (C2>=2),2020-03-25,2022-12-31,647,180,195
+Uganda,Public transport closed (C5>=2),2020-03-25,2022-12-31,175,129,195
+Uganda,Stay at home (C6>=2),2020-03-30,2022-01-24,621,175,195
+Uganda,Internal movement (C7>=2),2020-03-30,2022-01-04,371,174,195
+Uganda,International travel ban (C8>=3),2020-03-22,2021-06-10,230,182,195
+Uganda,Stringency index >= 70,2020-03-30,2022-01-04,382,175,195

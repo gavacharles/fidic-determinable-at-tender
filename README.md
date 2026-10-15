@@ -11,7 +11,7 @@ FIDIC allocates risk through tests decided after the event ("Unforeseeable", "ex
 | 2 | Access to the Site | 2.1 | `papers/02_site_access` | **First draft** |
 | 3 | Unforeseeable physical conditions | 4.12 | `papers/03_ground_conditions` | **First draft** |
 | 4 | Defects and overloading (open data) | 11 / 4.1 | `papers/04_defects_overloading` | **First draft** |
-| 5 | Delay damages | 8.8 [8.7] | `papers/05_delay_damages` | Scoped |
+| 5 | Delay damages | 8.8 [8.7] | `papers/05_delay_damages` | **First draft** |
 | 6 | Notice time bar | 20.2.1 [20.1] | `papers/06_notice_time_bar` | Scoped |
 | 7 | Exceptional Events | 18 [19] | `papers/07_exceptional_events` | Pilot done |
 | 8 | Forces of nature, care of the Works | 17.2 [17.3] | `papers/08_forces_of_nature` | Scoped |

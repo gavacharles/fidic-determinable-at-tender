@@ -1,0 +1,22 @@
+project,road,setting,stage,eirr_pct,source
+RDPP1 (P002970),RDPP1 roads combined,rural trunk,appraisal,19.0,ICR0000907
+RDPP1 (P002970),RDPP1 roads combined,rural trunk,completion,21.1,ICR0000907
+RDPP2 (P065436),RDPP2 roads combined (low),rural trunk,appraisal,12.5,ICR0000916
+RDPP2 (P065436),RDPP2 roads combined (high),rural trunk,appraisal,21.3,ICR0000916
+RDPP2 (P065436),RDPP2 roads combined,rural trunk,completion,18.4,ICR0000916
+Road Sector Programme (P002923),Kampala-Entebbe,peri-urban trunk,appraisal,12.7,ICR 22254-UG
+Road Sector Programme (P002923),Kampala-Entebbe,peri-urban trunk,completion,12.7,ICR 22254-UG
+Road Sector Programme (P002923),Mbarara-Ibanda,rural trunk,appraisal,18.2,ICR 22254-UG
+Road Sector Programme (P002923),Mbarara-Ibanda,rural trunk,completion,17.4,ICR 22254-UG
+RDPP3 (P074079),Kampala-Gayaza-Zirobwe,peri-urban trunk,appraisal,27.5,ICR00002185 Table 3.4
+RDPP3 (P074079),Kampala-Gayaza-Zirobwe,peri-urban trunk,completion,55.4,ICR00002185 Table 3.4
+RDPP3 (P074079),Soroti-Dokolo-Lira,rural trunk,appraisal,21.3,ICR00002185 Table 3.5
+RDPP3 (P074079),Soroti-Dokolo-Lira,rural trunk,completion,15.6,ICR00002185 Table 3.5
+TSDP (P092837),Kamwenge-Fort Portal,rural trunk,appraisal,18.1,PAD 50977-UG
+TSDP (P092837),Kamwenge-Fort Portal,rural trunk,completion,16.8,ICR00002228
+TSDP (P092837),Vurra-Arua-Koboko-Oraba,rural trunk,appraisal,21.2,PAD 50977-UG
+NERAMP (P125590),Tororo-Mbale-Soroti-Lira-Kamdini (OPRC),rural trunk,appraisal,13.4,PAD707
+Albertine (P145101),Hoima-Kaiso-Tonya (DBST),rural trunk,appraisal,17.9,PAD724
+Albertine (P145101),Hoima-Kaiso-Tonya (DBST),rural trunk,completion,14.5,ICR00006179
+KIIDP2 (P133590),Kampala batch 1 roads,urban,appraisal,46.0,PAD800
+KIIDP2 (P133590),Kampala batch 2 roads,urban,appraisal,53.4,PAD800

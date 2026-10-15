@@ -1,0 +1,22 @@
+project,road,setting,stage,eirr_pct,source,fyrr_g3,fyrr_g5,fyrr_g7,daily_loss_pct,daily_loss_lo,daily_loss_hi,ratio_rate_to_loss,days_to_cap,loss_at_cap_pct
+RDPP1 (P002970),RDPP1 roads combined,rural trunk,appraisal,19.0,ICR0000907,0.2037,0.1833,0.1638,0.0557,0.0504,0.0613,0.8978,200.0,11.1386
+RDPP1 (P002970),RDPP1 roads combined,rural trunk,completion,21.1,ICR0000907,0.2309,0.2094,0.1887,0.0629,0.0572,0.0688,0.7954,200.0,12.5719
+RDPP2 (P065436),RDPP2 roads combined (low),rural trunk,appraisal,12.5,ICR0000916,0.1296,0.1133,0.0982,0.0365,0.0324,0.041,1.3695,200.0,7.3022
+RDPP2 (P065436),RDPP2 roads combined (high),rural trunk,appraisal,21.3,ICR0000916,0.2336,0.212,0.1912,0.0636,0.0579,0.0695,0.7866,200.0,12.713
+RDPP2 (P065436),RDPP2 roads combined,rural trunk,completion,18.4,ICR0000916,0.1962,0.1761,0.157,0.0537,0.0485,0.0592,0.9306,200.0,10.7458
+Road Sector Programme (P002923),Kampala-Entebbe,peri-urban trunk,appraisal,12.7,ICR 22254-UG,0.1316,0.1152,0.0999,0.037,0.0329,0.0415,1.3503,200.0,7.4059
+Road Sector Programme (P002923),Kampala-Entebbe,peri-urban trunk,completion,12.7,ICR 22254-UG,0.1316,0.1152,0.0999,0.037,0.0329,0.0415,1.3503,200.0,7.4059
+Road Sector Programme (P002923),Mbarara-Ibanda,rural trunk,appraisal,18.2,ICR 22254-UG,0.1937,0.1738,0.1548,0.0531,0.0479,0.0585,0.9419,200.0,10.6165
+Road Sector Programme (P002923),Mbarara-Ibanda,rural trunk,completion,17.4,ICR 22254-UG,0.1839,0.1645,0.146,0.0505,0.0455,0.0559,0.9893,200.0,10.1078
+RDPP3 (P074079),Kampala-Gayaza-Zirobwe,peri-urban trunk,appraisal,27.5,ICR00002185 Table 3.4,0.3231,0.2987,0.2748,0.0873,0.0808,0.094,0.5726,200.0,17.4628
+RDPP3 (P074079),Kampala-Gayaza-Zirobwe,peri-urban trunk,completion,55.4,ICR00002185 Table 3.4,0.8681,0.8351,0.8021,0.2343,0.2252,0.2433,0.2134,200.0,46.8551
+RDPP3 (P074079),Soroti-Dokolo-Lira,rural trunk,appraisal,21.3,ICR00002185 Table 3.5,0.2336,0.212,0.1912,0.0636,0.0579,0.0695,0.7866,200.0,12.713
+RDPP3 (P074079),Soroti-Dokolo-Lira,rural trunk,completion,15.6,ICR00002185 Table 3.5,0.1629,0.1445,0.1272,0.0451,0.0403,0.0501,1.1094,200.0,9.0141
+TSDP (P092837),Kamwenge-Fort Portal,rural trunk,appraisal,18.1,PAD 50977-UG,0.1925,0.1726,0.1536,0.0528,0.0476,0.0582,0.9477,200.0,10.5521
+TSDP (P092837),Kamwenge-Fort Portal,rural trunk,completion,16.8,ICR00002228,0.1768,0.1577,0.1396,0.0487,0.0437,0.0539,1.0272,200.0,9.7354
+TSDP (P092837),Vurra-Arua-Koboko-Oraba,rural trunk,appraisal,21.2,PAD 50977-UG,0.2323,0.2107,0.1899,0.0632,0.0575,0.0691,0.791,200.0,12.6424
+NERAMP (P125590),Tororo-Mbale-Soroti-Lira-Kamdini (OPRC),rural trunk,appraisal,13.4,PAD707,0.1388,0.1219,0.1062,0.0389,0.0346,0.0435,1.286,200.0,7.7762
+Albertine (P145101),Hoima-Kaiso-Tonya (DBST),rural trunk,appraisal,17.9,PAD724,0.19,0.1702,0.1514,0.0521,0.047,0.0575,0.9593,200.0,10.4241
+Albertine (P145101),Hoima-Kaiso-Tonya (DBST),rural trunk,completion,14.5,ICR00006179,0.1506,0.133,0.1164,0.0419,0.0374,0.0467,1.1931,200.0,8.3813
+KIIDP2 (P133590),Kampala batch 1 roads,urban,appraisal,46.0,PAD800,0.6587,0.6284,0.5981,0.1776,0.1693,0.186,0.2815,200.0,35.5276
+KIIDP2 (P133590),Kampala batch 2 roads,urban,appraisal,53.4,PAD800,0.8213,0.7889,0.7564,0.2216,0.2127,0.2305,0.2256,200.0,44.3213

@@ -9,7 +9,7 @@ FIDIC allocates risk through tests decided after the event ("Unforeseeable", "ex
 | 0 | Weather: "same rain, different verdict" | 8.5(c) [8.4(c)] + MoWT 1229 | separate repo `uganda-climate-disputes` | Full draft |
 | 1 | Price adjustment: which index? (companion to DAM) | 13.7 [13.8] | `papers/01_price_adjustment` | **First draft** |
 | 2 | Access to the Site | 2.1 | `papers/02_site_access` | Scoped |
-| 3 | Unforeseeable physical conditions | 4.12 | `papers/03_ground_conditions` | Scoped |
+| 3 | Unforeseeable physical conditions | 4.12 | `papers/03_ground_conditions` | **First draft** |
 | 4 | Defects and overloading (open data) | 11 / 4.1 | `papers/04_defects_overloading` | Re-designed |
 | 5 | Delay damages | 8.8 [8.7] | `papers/05_delay_damages` | Scoped |
 | 6 | Notice time bar | 20.2.1 [20.1] | `papers/06_notice_time_bar` | Scoped |

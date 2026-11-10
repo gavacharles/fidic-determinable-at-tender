@@ -1,28 +1,43 @@
-# Determinable at tender: open data for construction contract risk allocation
+# fidic-determinable-at-tender
 
-**Gavamukulya (Gava) Charles** · private repository · started 15 October 2026
+Python code, data, results and drafts for a series of data-driven studies of FIDIC clauses whose tests are decided after the event, each turned into a measurable index using open data from Uganda.
 
-FIDIC allocates risk through tests decided after the event ("Unforeseeable", "exceptional", "should have become aware", "too slow"). Each paper turns one such test into a data-based index, measures how often defensible choices reverse the outcome, grounds it in contract and claim documents, and proposes drafting that fixes the answer at tender.
+Author: Gavamukulya (Gava) Charles.
 
-| # | Paper | Clause (FIDIC 2017 [1999]) | Folder | Status |
-|---|---|---|---|---|
-| 0 | Weather: "same rain, different verdict" | 8.5(c) [8.4(c)] + MoWT 1229 | separate repo `uganda-climate-disputes` | Full draft |
-| 1 | Price adjustment: which index? (companion to DAM) | 13.7 [13.8] | `papers/01_price_adjustment` | **First draft** |
-| 2 | Access to the Site | 2.1 | `papers/02_site_access` | **First draft** |
-| 3 | Unforeseeable physical conditions | 4.12 | `papers/03_ground_conditions` | **First draft** |
-| 4 | Defects and overloading (open data) | 11 / 4.1 | `papers/04_defects_overloading` | **First draft** |
-| 5 | Delay damages | 8.8 [8.7] | `papers/05_delay_damages` | **First draft** |
-| 6 | Notice time bar | 20.2.1 [20.1] | `papers/06_notice_time_bar` | **First draft** |
-| 7 | Exceptional Events | 18 [19] | `papers/07_exceptional_events` | **First draft** |
-| 8 | Forces of nature, care of the Works | 17.2 [17.3] | `papers/08_forces_of_nature` | **First draft** |
-| 9 | Delayed payment | 14.8 | `papers/09_delayed_payment` | **First draft** |
-| 10 | Rate of progress and termination | 8.7 / 15.2 [8.6 / 15.2] | `papers/10_rate_of_progress` | **First draft** |
+## Layout
 
-- Agenda: [`docs/research_agenda.md`](docs/research_agenda.md)
-- Data audit: [`docs/data_audit.md`](docs/data_audit.md)
-- Related work by the author (DAM etc.): [`docs/related_work.md`](docs/related_work.md)
-- Shared code: [`common/`](common/)
+| Path | What it is |
+|---|---|
+| `papers/NN_<topic>/` | One folder per study: `README.md` (concept note), `src/`, `data/` (raw data not committed), `results/`, `figures/`, `paper/` |
+| `common/` | Shared plotting style and helpers |
+| `shared_data/src/` | Shared data fetchers (`fetch_oag.py`, `fetch_worldbank.py`) |
+| `docs/` | Research agenda, data audit, related work |
+| `requirements.txt` | Python dependencies |
 
-Each paper folder: `README.md` (concept note), `src/`, `data/` (raw data not committed), `results/`, `figures/`, `paper/`.
+### Studies
 
-**Confidentiality.** Project documents are reported only in anonymised form; they are not copied into this repository.
+| Folder | Clause (FIDIC 2017 [1999]) |
+|---|---|
+| `papers/00_weather_eot` | 8.5(c) [8.4(c)] and MoWT 1229 (main work in the separate `uganda-climate-disputes` repository) |
+| `papers/01_price_adjustment` | 13.7 [13.8] |
+| `papers/02_site_access` | 2.1 |
+| `papers/03_ground_conditions` | 4.12 |
+| `papers/04_defects_overloading` | 11 / 4.1 |
+| `papers/05_delay_damages` | 8.8 [8.7] |
+| `papers/06_notice_time_bar` | 20.2.1 [20.1] |
+| `papers/07_exceptional_events` | 18 [19] |
+| `papers/08_forces_of_nature` | 17.2 [17.3] |
+| `papers/09_delayed_payment` | 14.8 |
+| `papers/10_rate_of_progress` | 8.7 / 15.2 [8.6 / 15.2] |
+
+## Setup
+
+```
+pip install -r requirements.txt
+```
+
+Each study's scripts are in its own `src/` folder; see that study's README.
+
+## Confidentiality
+
+Project documents are not copied into this repository; where used, they are reported only in anonymised form.

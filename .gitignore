@@ -7,3 +7,8 @@ papers/*/data/external/
 *.log
 shared_data/raw/
 shared_data/text/
+
+# Paper drafts and write-ups are kept private (moved 2026-11-20)
+/papers/*/paper/manuscript.md
+/docs/related_work.md
+/docs/research_agenda.md
